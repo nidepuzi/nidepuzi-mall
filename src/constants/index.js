@@ -1,4 +1,4 @@
-export const baseUrl = '//m.xiaolumeimei.com';
+export const baseUrl = '//m.nidepuzi.com';
 
 export const baseEndpoint = '/rest/v2/';
 
@@ -7,7 +7,7 @@ export const baseEndpointV1 = '/rest/v1/';
 export const offset = 250;
 
 export const image = {
-  imageUrl: '//img.xiaolumeimei.com',
+  imageUrl: '//img.nidepuzi.com',
   square: '?imageMogr2/thumbnail/200/format/jpg/quality/90/crop/200x200',
 };
 
@@ -21,7 +21,7 @@ export const couponStatus = {
 };
 
 export const forum = {
-  forumUrl: '//forum.xiaolumeimei.com/accounts/xlmm/login/',
+  forumUrl: '//forum.nidepuzi.com/accounts/xlmm/login/',
 };
 
 export const shareType = {

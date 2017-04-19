@@ -102,7 +102,7 @@ export default class Succeed extends Component {
             <a href="#" className="list-group-item">如果您推荐您的朋友成为会员，我们会有<b>30元现金红包奖励！</b>详情请查看下面的新手教程或咨询您的管理员。</a>
           </div>
         <div>
-        <a href="http://m.xiaolumeimei.com/mama_shop/html/intro_march.html" className="list-group-item" style={{ color: '#FF1493' }}>新手必读-小鹿新人赚钱技巧全知道>>></a>
+        <a href="http://m.nidepuzi.com/mama_shop/html/intro_march.html" className="list-group-item" style={{ color: '#FF1493' }}>新手必读-小鹿新人赚钱技巧全知道>>></a>
         </div>
         <div className="">
           <Image className="qr-code" src={data.qr_img} quality={50}/>
