@@ -1,6 +1,3 @@
-from node
+from registry.aliyuncs.com/xiaolu-img/busybox:latest
+add dist /var/www/mall
 
-run mkdir -p /var/www
-add . /var/www/deploy/xiaolu/mall
-copy bin/qshell_linux_amd64 /usr/sbin/qshell
-workdir /var/www/deploy/xiaolu/mall
