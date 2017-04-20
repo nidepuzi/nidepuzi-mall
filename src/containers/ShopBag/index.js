@@ -343,8 +343,7 @@ export class ShopBag extends Component {
               <button className="button button-energized col-xs-12" type="button" onClick={this.onBuyNowClick}>{'购买'}</button>
             </If>
             <If condition={Number(this.state.isBuyable) === 0}>
-              <button className="button button-energized col-xs-5 col-xs-offset-1" type="button" onClick={this.onXiaolucoinBuyClick}>{'购买'}</button>
-              <button className="button button-energized col-xs-4 col-xs-offset-1" type="button" onClick={this.onApplyClick}>{'申请'}</button>
+              <button className="button button-energized col-xs-12" type="button" onClick={this.onXiaolucoinBuyClick}>{'购买'}</button>
             </If>
           </BottomBar>
         </If>
