@@ -1,21 +1,21 @@
 module.exports = {
   production: {
-    apiHost: 'm.xiaolumeimei.com',
+    apiHost: 'm.nidepuzi.com',
     apiPort: 80,
     port: 7070,
   },
   staging: {
-    apiHost: 'staging.xiaolumm.com',
+    apiHost: 'staging.nidepuzi.com',
     apiPort: 80,
     port: 7070,
   },
   admin: {
-    apiHost: 'admin.xiaolumm.com',
+    apiHost: 'admin.nidepuzi.com',
     apiPort: 80,
     port: 7070,
   },
   django: {
-    apiHost: 's18.xiaolumm.com',
+    apiHost: 's18.nidepuzi.com',
     apiPort: 80,
     port: 7070,
   },
