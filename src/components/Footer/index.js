@@ -10,8 +10,8 @@ export class Footer extends Component {
   render() {
     return (
       <footer className="text-center clearfix font-xxs footer">
-        <p>Copyright © 2014-2016 小鹿美美，All Rights Reserved</p>
-        <p> 沪ICP备15013901号-1</p>
+        <p>Copyright © 2017-2018 你的铺子，All Rights Reserved</p>
+        <p> 沪ICP备17016131号-1</p>
       </footer>
     );
   }
