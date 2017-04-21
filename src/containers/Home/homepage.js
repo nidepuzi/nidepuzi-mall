@@ -288,7 +288,7 @@ export default class HomePage extends Component {
 
     return (
       <div className={mainCls}>
-        <Header title={logo} titleType="image" rightText="我的微店" onRightBtnClick={this.enterMamahome} hide={!hasHeader}/>
+        <Header title={"你的铺子"} titleType="text" hide={!hasHeader}/>
         <div className="homepage-container">
           <div className="content content-white-bg">
             <div className={'home-div-toptabs ' + (sticky ? 'sticky ' : '')}>
