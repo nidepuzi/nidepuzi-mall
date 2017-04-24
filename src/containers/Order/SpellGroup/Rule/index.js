@@ -28,9 +28,9 @@ export default class SpellGroupRule extends Component {
   render() {
     return (
       <div>
-        <Header title="小鹿美美拼团条款" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
+        <Header title="你的铺子拼团条款" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
         <div className="col-xs-12 col-sm-8 col-sm-offset-2 content">
-          <h5 >小鹿美美拼团条款</h5>
+          <h5 >你的铺子拼团条款</h5>
 
           <h3>1.拼团有效期</h3>
           <p>拼团有效期是自开团时刻起的24小时内，如果距离商品失效时间小于24小时，则以商品的结束时间为准。</p>
@@ -41,7 +41,7 @@ export default class SpellGroupRule extends Component {
           <p>拼团失败的订单，系统会在1个工作日内处理退回至小鹿零钱中。</p>
           <h3>3.可以退款退货么</h3>
           <p>由于团购都是以极低的价格出售，因此不支持退款退货，各位亲注意。收到货物后如有质量问题可以申请退货。</p>
-          <p>在法律法规许可范围内，小鹿美美保留对拼团活动的最终解释权。</p>
+          <p>在法律法规许可范围内，你的铺子保留对拼团活动的最终解释权。</p>
         </div>
       </div>
     );
