@@ -154,7 +154,7 @@ export default class Profile extends Component {
             </li>
             <li className="bottom-border row no-margin hide">
               <Link to="">
-                <p className="col-xs-6 text-left">关于小鹿美美</p>
+                <p className="col-xs-6 text-left">关于你的铺子</p>
                 <p className="col-xs-6 text-right">
                   <i className="icon-angle-right font-grey-light no-padding"></i>
                 </p>
