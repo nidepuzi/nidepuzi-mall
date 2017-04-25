@@ -259,11 +259,11 @@ export default class HomePage extends Component {
       return;
     }
     if (profile && profile.success && (profile.data.xiaolumm === null)) {
-      Toast.show('您还不是小鹿妈妈，请关注小鹿美美公众号了解更多信息');
+      Toast.show('您还不是你的铺子会员，请关注你的铺子公众号了解更多信息');
       return;
     }
     if (profile && profile.success && (profile.data.xiaolumm.status !== 'effect')) {
-      Toast.show('您的小鹿妈妈账号异常，请关注小鹿美美公众号联系客服');
+      Toast.show('您的你的铺子会员账号异常，请关注你的铺子公众号联系客服');
       return;
     }
     if (profile && (!profile.success || profile.error)) {
@@ -354,8 +354,8 @@ export default class HomePage extends Component {
                 })}
               </div>
             </If>
-            <BackTop />
             <Footer />
+            <div style={{ height: '44px' }}></div>
           </div>
         </div>
       </div>
