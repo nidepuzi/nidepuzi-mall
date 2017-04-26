@@ -112,11 +112,6 @@ export default class TopTenModel2 extends Component {
 
     if (modelData.coupons[index].isReceived && (jumpUrl !== null) && (jumpUrl !== undefined) && (jumpUrl.length > 0)) {
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-        const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
-        if (appVersion < 20161019 && appVersion >= 20160815) {
-          window.AndroidBridge.jumpToNativeLocation(jumpUrl);
-          return;
-        }
         if (utils.detector.isApp()) {
           plugins.invoke({
             method: 'jumpToNativeLocation',
@@ -152,7 +147,6 @@ export default class TopTenModel2 extends Component {
     const mmLinkId = this.props.location.query.mm_linkid ? this.props.location.query.mm_linkid : 0;
 
     if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-      const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
       if (utils.detector.isApp()) {
         plugins.invoke({
           method: 'jumpToNativeLocation',
