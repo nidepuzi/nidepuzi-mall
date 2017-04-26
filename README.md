@@ -1,7 +1,7 @@
-xlmm-mall
+nidepuzi-mall
 _______________________
 
-[![Build Status](http://git.xiaolumm.com:8000/api/badges/XLMM-FE/xlmm-mall/status.svg)](http://git.xiaolumm.com:8000/XLMM-FE/xlmm-mall)
+[![Build Status](http://git.xiaolumm.com:8000/api/badges/ndpuz/nidepuzi-mall/status.svg)](http://git.xiaolumm.com:8000/ndpuz/nidepuzi-mall)
 
 ## Table of Contents
 
@@ -52,8 +52,8 @@ View -> Syntax -> Open all with current extension as ... -> Babel -> JavaScript(
 ```
 ## Installation
 ```shell
-$ git clone ssh://git@dev.huyi.so:10022/xiaolumm/xlmm-mall.git
-$ cd xlmm-mall
+$ git clone ssh://git@git.xiaolumm.com:10022/ndpuz/nidepuzi-mall.git
+$ cd nidepuzi-mall
 $ npm install babel-eslint -g
 $ npm install eslint -g
 $ npm install

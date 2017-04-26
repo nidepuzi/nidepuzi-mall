@@ -146,7 +146,7 @@ export class ShopBag extends Component {
     }
 
     if (isBuyable === 1) {
-      const jumpUrl = 'com.jimei.xlmm://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
+      const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
         const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
         if (appVersion >= 20161214) {
@@ -218,7 +218,7 @@ export class ShopBag extends Component {
       goodsNum += item.num;
     });
 
-    const jumpUrl = 'com.jimei.xlmm://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
+    const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
     if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
       const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
       if (appVersion >= 20161214) {

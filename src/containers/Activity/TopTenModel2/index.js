@@ -148,19 +148,15 @@ export default class TopTenModel2 extends Component {
   onProductClick = (e) => {
     const dataSet = e.currentTarget.dataset;
     const modelId = Number(dataSet.modelid);
-    const appUrl = 'com.jimei.xlmm://app/v1/products/modelist?model_id=' + modelId;
+    const appUrl = 'com.danlai.ndpz://app/v1/products/modelist?model_id=' + modelId;
     const mmLinkId = this.props.location.query.mm_linkid ? this.props.location.query.mm_linkid : 0;
 
     if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
       const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
-      if (appVersion < 20161019 && appVersion >= 20160815) {
-        window.AndroidBridge.jumpToNativeLocation(appUrl);
-        return;
-      }
       if (utils.detector.isApp()) {
         plugins.invoke({
           method: 'jumpToNativeLocation',
-          data: { target_url: 'com.jimei.xlmm://app/v1/products?product_id=' + window.location.href.substr(0, window.location.href.indexOf('/mall/')) + '/mall/product/details/' + modelId },
+          data: { target_url: 'com.danlai.ndpz://app/v1/products?product_id=' + window.location.href.substr(0, window.location.href.indexOf('/mall/')) + '/mall/product/details/' + modelId },
         });
         return;
       }
@@ -169,7 +165,7 @@ export default class TopTenModel2 extends Component {
     if (utils.detector.isIOS() && utils.detector.isApp()) {
       plugins.invoke({
         method: 'jumpToNativeLocation',
-        data: { target_url: 'com.jimei.xlmm://app/v1/products?product_id=' + window.location.href.substr(0, window.location.href.indexOf('/mall/')) + '/mall/product/details/' + modelId },
+        data: { target_url: 'com.danlai.ndpz://app/v1/products?product_id=' + window.location.href.substr(0, window.location.href.indexOf('/mall/')) + '/mall/product/details/' + modelId },
       });
       return;
     }

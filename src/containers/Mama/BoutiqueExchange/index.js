@@ -131,7 +131,7 @@ export default class BoutiqueExchg extends Component {
           if (utils.detector.isApp()) {
             plugins.invoke({
               method: 'jumpToNativeLocation',
-              data: { target_url: 'com.jimei.xlmm://app/v1/vip_0day' },
+              data: { target_url: 'com.danlai.ndpz://app/v1/vip_0day' },
             });
           } else {
             this.context.router.push('/mama/everydaypush');
