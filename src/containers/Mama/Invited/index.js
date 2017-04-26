@@ -79,7 +79,7 @@ export default class Invited extends Component {
       method: 'changeId',
       data: {
         id: shareType[activeTab],
-        title: inviteSharing.data.title || '邀请您加入小鹿正式会员',
+        title: inviteSharing.data.title || '邀请您加入你的铺子正式会员',
       },
     });
 
@@ -114,7 +114,7 @@ export default class Invited extends Component {
       method: 'changeId',
       data: {
         id: shareType[activeTab],
-        title: inviteSharing.data.title || '邀请您加入小鹿正式会员',
+        title: inviteSharing.data.title || '邀请您加入你的铺子正式会员',
       },
     });
   }
@@ -151,10 +151,9 @@ export default class Invited extends Component {
       <div className="col-xs-12 col-sm-8 col-sm-offset-2 no-padding invited">
         <Header title="邀请开店" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} hide={utils.detector.isApp()}/>
         <div className="spec">
-            <h5>正式会员享受三大福利：</h5>
+            <h5>正式会员享受大福利：</h5>
             <p>福利1:享有精品汇所有商品代理权，爆款销售佣金20-200元。</p>
-            <p>福利2:只用216元获得价值264元的原生态环保纸巾3箱，可自用可销售。</p>
-            <p>福利3:店铺或商品轻松转发，根据会员积分升级计划更有佣金提升。小鹿社群免费天天培训。</p>
+            <p>福利2:店铺或商品轻松转发，根据会员积分升级计划更有佣金提升。社群免费天天培训。</p>
         </div>
         <div className="invited-list text-center">
           <h5>{`邀请${invited.data.count || 0}位好友`}</h5>
@@ -167,7 +166,7 @@ export default class Invited extends Component {
                     <p style={{ color: '#666' }}>{moment(item.charge_time).format('YYYY-MM-DD hh:mm:ss')}</p>
                     <p>
                       <span style={{ color: '#0095FF' }}>{item.nick}</span>
-                      <span style={{ color: '#1E1E1E' }}>通过邀请加入小鹿</span>
+                      <span style={{ color: '#1E1E1E' }}>通过邀请加入你的铺子</span>
                     </p>
                   </div>
                 </li>

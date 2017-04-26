@@ -278,7 +278,7 @@ export default class Apply extends Component {
               </div>
             </div>
           </Popup>
-          <Dialog active={this.state.isShowDialog} title="小鹿极速退款说明" content="小鹿极速退款，款项将快速返回至小鹿帐户。该退款能用于购买商品，也可提现。" onCancelBtnClick={this.onCancelBtnClick} onAgreeBtnClick={this.onAgreeBtnClick}/>
+          <Dialog active={this.state.isShowDialog} title="极速退款说明" content="极速退款，款项将快速返回至你的铺子零钱帐户。该退款能用于购买商品，也可提现。" onCancelBtnClick={this.onCancelBtnClick} onAgreeBtnClick={this.onAgreeBtnClick}/>
           <div className="row no-margin">
             <button className="col-xs-10 col-xs-offset-1 margin-top-xs button button-energized" type="button" onClick={this.onSubmitBtnClick}>提交</button>
           </div>

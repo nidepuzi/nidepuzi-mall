@@ -102,7 +102,7 @@ export default class Detail extends Component {
       Toast.show(chargeOrder.data.info);
     }
     if (fetchOrder.success) {
-      logisticsCompany = fetchOrder.data.logistics_company && fetchOrder.data.logistics_company.name || '小鹿推荐';
+      logisticsCompany = fetchOrder.data.logistics_company && fetchOrder.data.logistics_company.name || '推荐';
       addressId = fetchOrder.data && fetchOrder.data.user_adress.id;
       this.setState({ logisticsCompanyName: logisticsCompany, addressid: addressId });
 
@@ -470,7 +470,7 @@ export default class Detail extends Component {
             <p><span>商品金额</span><span className="pull-right font-yellow">{'￥' + Number(trade.total_fee).toFixed(2)}</span></p>
             <p><span>优惠券</span><span className="pull-right font-yellow">{'-￥' + Number(trade.discount_fee).toFixed(2)}</span></p>
             <p><span>运费</span><span className="pull-right font-yellow">{'￥' + Number(trade.post_fee).toFixed(2)}</span></p>
-            <p><span>小鹿零钱支付</span><span className="pull-right font-yellow">{'-￥' + Number(trade.payment - trade.pay_cash).toFixed(2)}</span></p>
+            <p><span>零钱支付</span><span className="pull-right font-yellow">{'-￥' + Number(trade.payment - trade.pay_cash).toFixed(2)}</span></p>
           </div>
           <div>
             <If condition={type === 1}>
@@ -572,7 +572,7 @@ export default class Detail extends Component {
           </If>
         </Popup>
         <LogisticsPopup active={this.state.logisticsPopupShow} companies={logisticsCompanies} onItemClick={this.onLogisticsCompanyChange} onColsePopupClick={this.onColseLogisticsPopupClick}/>
-        <Dialog active={this.state.isShowDialog} title="小鹿提醒" content="非服装类商品是供应商直接发货，只能尽量满足您选择的快递公司，如需确认能否满足您的快递需求，请联系客服4008235355。" onCancelBtnClick={this.onCancelBtnClick} onAgreeBtnClick={this.onAgreeBtnClick}/>
+        <Dialog active={this.state.isShowDialog} title="提醒" content="部分商品是供应商直接发货，只能尽量满足您选择的快递公司，如需确认能否满足您的快递需求，请联系客服。" onCancelBtnClick={this.onCancelBtnClick} onAgreeBtnClick={this.onAgreeBtnClick}/>
       </div>
     );
   }

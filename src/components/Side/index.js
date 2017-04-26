@@ -72,7 +72,7 @@ export class Side extends Component {
               <p>{profile.xiaolu_coin || 0}</p>
               <p>
                 <i className="icon-database"></i>
-                <span className="font-xs">小鹿币</span>
+                <span className="font-xs">币</span>
               </p>
             </Link>
           </div>

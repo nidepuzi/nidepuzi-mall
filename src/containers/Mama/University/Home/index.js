@@ -225,7 +225,7 @@ export default class List extends Component {
                 <p className="col-xs-12 no-margin no-padding no-wrap padding-top-xxs">{course.title}</p>
                 <p className="col-xs-12 no-margin no-padding padding-top-xxs font-xxs font-grey-light">
                   <span className="col-xs-7 no-padding text-left no-wrap">{course.click_num_show + '人阅读'}</span>
-                  <span className="col-xs-5 no-padding text-right">小鹿美美</span>
+                  <span className="col-xs-5 no-padding text-right">你的铺子</span>
                 </p>
               </div>
             </li>
@@ -241,7 +241,7 @@ export default class List extends Component {
     const hasHeader = !utils.detector.isApp();
     return (
       <div>
-        <Header title="小鹿大学" leftIcon="icon-angle-left" onLeftBtnClick={this.onLeftBtnClick}/>
+        <Header title="教程" leftIcon="icon-angle-left" onLeftBtnClick={this.onLeftBtnClick}/>
         <div className="content university-container">
           <If condition={bottomTab === 'activity'}>
             <div className="activity-container">
