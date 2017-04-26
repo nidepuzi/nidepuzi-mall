@@ -93,7 +93,7 @@ export default class Detail extends Component {
     favoriteStatus: false,
     confirmAddBagDisable: false,
     chargeEnable: true,
-    type: 5,
+    type: 0,
   }
 
   componentWillMount() {
