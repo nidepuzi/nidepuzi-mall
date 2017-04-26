@@ -93,7 +93,7 @@ export default class Detail extends Component {
     favoriteStatus: false,
     confirmAddBagDisable: false,
     chargeEnable: true,
-    type: 5,
+    type: 0,
   }
 
   componentWillMount() {
@@ -277,11 +277,6 @@ export default class Detail extends Component {
     if (utils.detector.isApp()) {
       const jumpUrl = 'com.jimei.xlmm://app/v1/shopping_cart?type=' + this.state.type;
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-        const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
-        if (appVersion < 20161019 && appVersion >= 20160815) {
-          window.AndroidBridge.jumpToNativeLocation(jumpUrl);
-          return;
-        }
         if (utils.detector.isApp()) {
           plugins.invoke({
             method: 'jumpToNativeLocation',

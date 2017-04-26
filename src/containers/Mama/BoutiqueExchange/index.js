@@ -209,19 +209,9 @@ getRebateInfo = () => {
   render() {
     const { mamaLeader } = this.props.mamaBaseInfo;
     const { mamaTranCouponProfile } = this.props.boutiqueCoupon;
-    let hasHeader = true;
+    const hasHeader = true;
     const level = this.getLevelName(mamaTranCouponProfile.data.elite_level);
     const rebateInfo = this.getRebateInfo();
-    // temp code
-    if (utils.detector.isApp() && utils.detector.isIOS()) {
-      if (utils.detector.appVersion() <= 223) {
-        hasHeader = false;
-      }
-    } else if (utils.detector.isApp() && utils.detector.isAndroid()) {
-        if (utils.detector.appVersion() <= 138) {
-          hasHeader = false;
-        }
-    }
 
     return (
       <div className="boutiqueexchg-container no-padding">

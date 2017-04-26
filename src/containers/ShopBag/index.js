@@ -148,16 +148,13 @@ export class ShopBag extends Component {
     if (isBuyable === 1) {
       const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-        const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
-        if (appVersion >= 20161214) {
-          plugins.invoke({
-            method: 'jumpToNativeLocation',
-            data: { target_url: jumpUrl },
-          });
-          return;
-        }
+        plugins.invoke({
+          method: 'jumpToNativeLocation',
+          data: { target_url: jumpUrl },
+        });
+        return;
       }
-      if (utils.detector.isIOS() && utils.detector.appVersion() >= 221) {
+      if (utils.detector.isIOS()) {
         plugins.invoke({
           method: 'jumpToNativeLocation',
           data: { target_url: jumpUrl },
@@ -220,16 +217,13 @@ export class ShopBag extends Component {
 
     const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
     if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-      const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
-      if (appVersion >= 20161214) {
-        plugins.invoke({
-          method: 'jumpToNativeLocation',
-          data: { target_url: jumpUrl },
-        });
-        return;
-      }
+      plugins.invoke({
+        method: 'jumpToNativeLocation',
+        data: { target_url: jumpUrl },
+      });
+      return;
     }
-    if (utils.detector.isIOS() && utils.detector.appVersion() >= 221) {
+    if (utils.detector.isIOS()) {
       plugins.invoke({
         method: 'jumpToNativeLocation',
         data: { target_url: jumpUrl },

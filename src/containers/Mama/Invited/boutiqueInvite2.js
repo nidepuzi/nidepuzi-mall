@@ -229,7 +229,6 @@ export default class BoutiqueInvite2 extends Component {
     if (utils.detector.isApp()) {
       const jumpUrl = 'com.jimei.xlmm://app/v1/shopping_cart';
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-        const appVersion = Number(window.AndroidBridge.appVersion()) || 0;
         if (utils.detector.isApp()) {
           plugins.invoke({
             method: 'jumpToNativeLocation',

@@ -1,11 +1,6 @@
 import * as utils from 'utils';
 import _ from 'underscore';
 
-const supportNewBridgeVerison = {
-  iOS: 190,
-  android: 144,
-};
-
 export const setupWebViewJavascriptBridge = (callback) => {
   if (window.WebViewJavascriptBridge) {
     return callback(window.WebViewJavascriptBridge);
@@ -22,7 +17,7 @@ export const setupWebViewJavascriptBridge = (callback) => {
 };
 
 export const invoke = (params) => {
-  if (utils.detector.isApp() && utils.detector.isIOS() && utils.detector.osMainVersion() > 7 && utils.detector.appVersion() >= supportNewBridgeVerison.iOS) {
+  if (utils.detector.isApp() && utils.detector.isIOS() && utils.detector.osMainVersion() > 7) {
     if (!window.webkit) {
       throw String('this context does not support ' + params.method);
     }
