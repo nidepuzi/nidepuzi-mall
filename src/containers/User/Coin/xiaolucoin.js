@@ -97,7 +97,7 @@ export default class XiaoluCoin extends Component {
         <div className="content coin-container">
           <div className="row bonus-point padding-bottom-xxs">
             <p className="col-xs-12 no-margin margin-top-sm text-center no-margin font-orange bonus-point-value">{coin || 0}</p>
-            <p className="col-xs-12 no-margin margin-bottom-sm text-center font-sm">我的小鹿币</p>
+            <p className="col-xs-12 no-margin margin-bottom-sm text-center font-sm">我的铺子币</p>
           </div>
           <If condition={!_.isEmpty(logs)}>
             <ul className="point-list">
@@ -123,8 +123,8 @@ export default class XiaoluCoin extends Component {
           <If condition={_.isEmpty(logs) && !(coinLog.isLoading)}>
             <div className="text-center coin-list-empty">
               <i className="icon-database icon-5x"/>
-              <p>您暂时还没有小鹿币收支纪录哦～</p>
-              <p className="font-xs font-grey-light">充值小鹿币购券换券更方便，快去看看吧～</p>
+              <p>您暂时还没有铺子币收支纪录哦～</p>
+              <p className="font-xs font-grey-light">充值铺子币购券换券更方便，快去看看吧～</p>
               <Link className="col-xs-4 col-xs-offset-4 margin-top-xs margin-bottom-lg button button-energized" to="/recharge">快去看看</Link>
             </div>
           </If>

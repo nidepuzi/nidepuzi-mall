@@ -649,7 +649,7 @@ export default class Commit extends Component {
                 }
                 return (
                   <div className={`row no-margin bottom-border ${prefixCls}-row`} key={item.pid}>
-                    <p className="col-xs-5 no-padding">小鹿零钱</p>
+                    <p className="col-xs-5 no-padding">零钱</p>
                     <p className="col-xs-7 no-padding">
                       <span className="col-xs-10 no-padding text-right">{item.value}</span>
                       <Checkbox className="col-xs-2" checked={this.state.walletChecked} walletBalance={item.value} payType={item.channel} onChange={this.onWalletChange}/>
@@ -662,7 +662,7 @@ export default class Commit extends Component {
                 }
                 return (
                   <div className={`row no-margin bottom-border ${prefixCls}-row`} key={item.pid}>
-                    <p className="col-xs-5 no-padding">小鹿币</p>
+                    <p className="col-xs-5 no-padding">币</p>
                     <p className="col-xs-7 no-padding">
                       <span className="col-xs-10 no-padding text-right">{item.value}</span>
                       <Checkbox className="col-xs-2" checked={this.state.xiaoluCoinChecked} walletBalance={item.value} payType={item.channel} onChange={this.onWalletChange}/>
@@ -718,19 +718,19 @@ export default class Commit extends Component {
         <Popup active={this.state.isShowPurchaseTerms}>
           <p className="font-md text-center">购买条款</p>
           <p className="font-xs">
-            亲爱的小鹿用户，由于特卖商城购买人数过多和供应商供货原因，可能存在极少数用户出现缺货的情况。
+            亲爱的用户，由于特卖商城购买人数过多和供应商供货原因，可能存在极少数用户出现缺货的情况。
           </p>
           <p className="font-xs">
             为了减少您长时间的等待，一旦出现这种情况，我们将在您购买一周后帮您自动退款，并补偿给您一张为全场通用优惠劵。
           </p>
           <p className="font-xs">
-            质量问题退货会以现金券或小鹿余额形式补偿10元邮费。
+            质量问题退货会以现金券或零钱形式补偿10元邮费。
           </p>
           <p className="font-xs">
-           订单向外贸工厂订货后无法退款，需要收货后走退货流程或者换货。
+           订单向工厂订货后无法退款，需要收货后走退货流程或者换货。
           </p>
           <p className="font-xs">
-            给您带来不便，敬请谅解！祝您购物愉快！本条款解释权归小鹿美美特卖商城所有。
+            给您带来不便，敬请谅解！祝您购物愉快！本条款解释权归你的铺子特卖商城所有。
           </p>
           <div className="row no-margin">
             <button className="col-xs-10 col-xs-offset-1 margin-top-xs button button-sm button-energized" type="button" onClick={this.onShowPurchaseItermsClick} disabled={this.state.save}>确定</button>

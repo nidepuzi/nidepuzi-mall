@@ -96,14 +96,11 @@ export default class Succeed extends Component {
     );*/
     return (
       <div className="col-xs-12 col-sm-8 col-sm-offset-2 no-padding opening-shop-succeed">
-      <Header title="欢迎您加入小鹿美美" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
+      <Header title="欢迎您加入你的铺子" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
         <div className="list-group">
-            <a href="#" className="list-group-item" >恭喜您成功加入小鹿全球精品连锁超市会员，<b>请关注小鹿美美公众号获得更多帮助信息。</b></a>
+            <a href="#" className="list-group-item" >恭喜您成功加入你的铺子会员，<b>请关注你的铺子公众号获得更多帮助信息。</b></a>
             <a href="#" className="list-group-item">如果您推荐您的朋友成为会员，我们会有<b>30元现金红包奖励！</b>详情请查看下面的新手教程或咨询您的管理员。</a>
           </div>
-        <div>
-        <a href="http://m.nidepuzi.com/mama_shop/html/intro_march.html" className="list-group-item" style={{ color: '#FF1493' }}>新手必读-小鹿新人赚钱技巧全知道>>></a>
-        </div>
         <div className="">
           <Image className="qr-code" src={data.qr_img} quality={50}/>
         </div>

@@ -217,10 +217,6 @@ export default class Recharge extends Component {
     const referalMamaid = this.props.location.query.mama_id ? this.props.location.query.mama_id : mmLinkId;
 
     if (mamaInfo && mamaInfo.data && (mamaInfo.data.length > 0)) {
-      /* if (!mamaInfo.data[0].is_buyable) {
-        Toast.show('目前只开放直接向小鹿购券妈妈充值功能，您不能直接向小鹿购券，暂时无法直接充值；全面充值功能即将开放，敬请等待！');
-      }*/
-
       if (this.state.selectId) {
         // this.props.addProductToShopBag(this.state.sku.product_id, this.state.sku.sku_items[0].sku_id, this.state.num);
         // 精品券默认是在app上支付
@@ -248,7 +244,7 @@ export default class Recharge extends Component {
     this.setState({ payTypePopupActive: false });
 
     if (mmLinkId === 0) {
-      Toast.show('小鹿妈妈信息获取不全，请重进此页面！！');
+      Toast.show('你的铺子会员信息获取不全，请重进此页面！！');
       e.preventDefault();
       return;
     }
@@ -426,11 +422,11 @@ export default class Recharge extends Component {
         <div className="margin-left-sm margin-right-sm" >
           <label className="text-center">
           <Checkbox className="inline-block margin-top-xxs" value={1} checked = {this.state.useWallet} onChange={this.handleUseWalletChange} />
-          {' 小鹿零钱' + walletValue}
+          {' 零钱' + walletValue}
           </label>
         </div>
         <div>
-          <p className="col-xs-offset-1 font-xs">购买条款说明：小鹿精品币仅限专业版精英妈妈充值及使用，充值越多越优惠。小鹿精品币能方便和自由的用来购买各种精品券，减少换券的烦恼。小鹿精品币不能退还，不能提现。购买即表明同意此条款。</p>
+          <p className="col-xs-offset-1 font-xs">购买条款说明：铺子币仅限专业版精英妈妈充值及使用，充值越多越优惠。铺子币能方便和自由的用来购买各种精品券，减少换券的烦恼。铺子币不能退还，不能提现。购买即表明同意此条款。</p>
         </div>
         <ul className="bottom-border upgrade-score">
           {eliteMamaUpgradeScore.map((item) =>

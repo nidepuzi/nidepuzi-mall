@@ -122,7 +122,7 @@ export default class Logistics extends Component {
         <Header title="物流信息" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
           <div className="content package-content">
             <If condition={!_.isEmpty(packages[key])}>
-              <p className="express-item bottom-border"><span>快递公司</span><span className="pull-right">{packages[key].logistics_company && packages[key].logistics_company.name || '小鹿推荐'}</span></p>
+              <p className="express-item bottom-border"><span>快递公司</span><span className="pull-right">{packages[key].logistics_company && packages[key].logistics_company.name || '推荐'}</span></p>
               <If condition={logistics.data && logistics.data.order}>
                 <p className="express-item bottom-border"><span>快递单号</span><span className="pull-right">{logistics.data && logistics.data.order || '暂无'}</span></p>
               </If>
