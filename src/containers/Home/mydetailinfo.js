@@ -136,12 +136,6 @@ export default class HomeMyDetailInfo extends Component {
               <span>常见问题</span>
             </Link>
           </li>
-          <li>
-            <Link to="/mama/home">
-              <i className="icon-home icon-gold"></i>
-              <span>我的店铺</span>
-            </Link>
-          </li>
         </ul>
       </div>
     );

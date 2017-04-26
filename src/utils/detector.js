@@ -9,7 +9,7 @@ class Detector {
   }
 
   isApp() {
-    return this.test('xlmm');
+    return this.test('ndpz');
   }
 
   isWechat() {
@@ -35,8 +35,8 @@ class Detector {
   }
 
   appVersion() {
-    if (this.userAgent.match(/xlmm\/(\d+).(\d+).(\d+)/)) {
-      return parseInt(this.userAgent.match(/xlmm\/(\d+).(\d+).(\d+)/)[0].split('/')[1].replace(/\./g, ''), 10);
+    if (this.userAgent.match(/ndpz\/(\d+).(\d+).(\d+)/)) {
+      return parseInt(this.userAgent.match(/ndpz\/(\d+).(\d+).(\d+)/)[0].split('/')[1].replace(/\./g, ''), 10);
     }
     return 0;
   }
