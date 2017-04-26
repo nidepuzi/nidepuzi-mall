@@ -12,7 +12,7 @@ import { Toast } from 'components/Toast';
 
 import './index.scss';
 
-const loginSplash = '//og224uhh3.qnssl.com/mall/login-splash.jpg';
+const loginSplash = '//oon0iwvsw.bkt.clouddn.com/192_192.jpg';
 const loginType = {
   password: 0,
   wechat: 1,
