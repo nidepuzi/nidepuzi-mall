@@ -167,7 +167,7 @@ export default class List extends Component {
 
   onCourseItemClick = (e) => {
     const { id, to } = e.currentTarget.dataset;
-    const appUrl = `com.jimei.xlmm://app/v1/webview?is_native=1&url=${to}`;
+    const appUrl = `com.danlai.ndpz://app/v1/webview?is_native=1&url=${to}`;
     this.props.readCourse(id);
     if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
       window.AndroidBridge.jumpToNativeLocation(appUrl);

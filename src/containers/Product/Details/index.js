@@ -224,7 +224,7 @@ export default class Detail extends Component {
       } else if (nextProps.details && nextProps.details.detail_content && !this.state.chargeEnable) {
         // 特卖抢购商品直接进入支付页面
         if (utils.detector.isApp()) {
-          const jumpUrl = 'com.jimei.xlmm://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
+          const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
           plugins.invoke({
             method: 'jumpToNativeLocation',
             data: { target_url: jumpUrl },
@@ -260,7 +260,7 @@ export default class Detail extends Component {
     const mmLinkId = this.props.location.query.mm_linkid ? this.props.location.query.mm_linkid : 0;
 
     if (utils.detector.isApp()) {
-      const jumpUrl = 'com.jimei.xlmm://app/v1/home';
+      const jumpUrl = 'com.danlai.ndpz://app/v1/home';
       plugins.invoke({
         method: 'jumpToNativeLocation',
         data: { target_url: jumpUrl },
@@ -275,7 +275,7 @@ export default class Detail extends Component {
   onShopbagClick = (e) => {
     const mmLinkId = this.props.location.query.mm_linkid ? this.props.location.query.mm_linkid : 0;
     if (utils.detector.isApp()) {
-      const jumpUrl = 'com.jimei.xlmm://app/v1/shopping_cart?type=' + this.state.type;
+      const jumpUrl = 'com.danlai.ndpz://app/v1/shopping_cart?type=' + this.state.type;
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
         if (utils.detector.isApp()) {
           plugins.invoke({
@@ -295,7 +295,7 @@ export default class Detail extends Component {
 
       /* plugins.invoke({
         method: 'jumpToNativeLocation',
-        data: { target_url: 'com.jimei.xlmm://app/v1/shopping_cart' },
+        data: { target_url: 'com.danlai.ndpz://app/v1/shopping_cart' },
         callback: (resp) => {},
       });*/
     } else {
@@ -476,7 +476,7 @@ export default class Detail extends Component {
 
   onClickJumpToBuyCoupon = (e) => {
     const { url } = e.currentTarget.dataset;
-    const prefix = 'com.jimei.xlmm://app/v1/webview?';
+    const prefix = 'com.danlai.ndpz://app/v1/webview?';
     let param = '';
     if (url) {
       param = url.substring(prefix.length);

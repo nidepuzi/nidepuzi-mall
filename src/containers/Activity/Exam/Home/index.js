@@ -91,7 +91,7 @@ export default class Home extends Component {
   onTakeExamBtnClick = (e) => {
     const examInfo = this.props.exam.info.data.exam_info || {};
     if (!examInfo.is_xlmm) {
-      Toast.show('您不是小鹿妈妈，无法参加此次考试！');
+      Toast.show('您不是你的铺子会员，无法参加此次考试！');
       return;
     }
     if (examInfo.total_point > 0) {

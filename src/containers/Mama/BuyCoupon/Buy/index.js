@@ -116,7 +116,7 @@ export default class BuyCoupon extends Component {
 
     if (this.props.mamaInfo.mamaInfo.isLoading && mamaInfo.mamaInfo.success && mamaInfo.mamaInfo.data && !(mamaInfo.mamaInfo.data[0].charge_status === 'charged'
         && (mamaInfo.mamaInfo.data[0].is_elite_mama))) {
-        Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注小鹿美美公众号或联系客服了解更多信息。');
+        Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注你的铺子公众号或联系客服了解更多信息。');
         this.context.router.replace('/mama/elitemama');
         return;
     }
@@ -182,7 +182,7 @@ export default class BuyCoupon extends Component {
       if (productDetails.data && productDetails.data.detail_content && productDetails.data.detail_content.is_boutique) {
         // 特卖抢购商品直接进入支付页面
         if (utils.detector.isApp()) {
-          const jumpUrl = 'com.jimei.xlmm://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
+          const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
           plugins.invoke({
             method: 'jumpToNativeLocation',
             data: { target_url: jumpUrl },
@@ -288,7 +288,7 @@ export default class BuyCoupon extends Component {
       //     Toast.show('商品信息获取不全');
       //   }
       // } else {
-      //   // Toast.show('对不起，只有专业版精英小鹿妈妈才能购买此精品券，请先加入精英妈妈！！');
+      //   // Toast.show('对不起，只有专业版精英你的铺子会员才能购买此精品券，请先加入精英妈妈！！');
       //   if (this.state.sku) {
       //     this.props.applyNegotiableCoupons(this.state.sku.product_id, this.state.num);
       //   } else {
@@ -296,7 +296,7 @@ export default class BuyCoupon extends Component {
       //   }
       // }
     } else {
-      Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注小鹿美美公众号或联系客服了解更多信息。');
+      Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注你的铺子公众号或联系客服了解更多信息。');
     }
     this.setState({ chargeEnable: false });
   }
@@ -310,7 +310,7 @@ export default class BuyCoupon extends Component {
     this.setState({ payTypePopupActive: false });
     console.log(mmLinkId);
     if (mmLinkId === 0) {
-      Toast.show('小鹿妈妈信息获取不全，请重进此页面！！');
+      Toast.show('你的铺子会员信息获取不全，请重进此页面！！');
       e.preventDefault();
       return;
     }
@@ -389,7 +389,7 @@ export default class BuyCoupon extends Component {
       this.context.router.push('/shop/bag?is_buyable=' + ((mamaInfo.success && mamaInfo.data && mamaInfo.data[0].is_buyable) ? '1' : '0')
         + '&type=6' + '&elite_level=' + mamaInfo.data[0].elite_level + '&xiaolucoin=' + ((mamaInfo.success && mamaInfo.data && Number(mamaInfo.data[0].xiaolucoin_cash) > 0) ? '1' : '0'));
     } else {
-      Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注小鹿美美公众号或联系客服了解更多信息。');
+      Toast.show('您还不是小鹿精英妈妈，无法申请或购买精品券。请关注你的铺子公众号或联系客服了解更多信息。');
     }
     e.preventDefault();
   }
