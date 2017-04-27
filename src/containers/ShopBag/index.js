@@ -52,7 +52,7 @@ export class ShopBag extends Component {
   }
 
   componentWillMount() {
-    const type = this.props.location.query.type ? this.props.location.query.type : 5;
+    const type = this.props.location.query.type ? this.props.location.query.type : 0;
     const buyable = this.props.location.query.is_buyable ? this.props.location.query.is_buyable : 1;
     const level = this.props.location.query.elite_level ? this.props.location.query.elite_level : '';
     const xiaolucoin = this.props.location.query.xiaolucoin ? this.props.location.query.xiaolucoin : 0;

@@ -198,7 +198,7 @@ export default class TopTenModel2 extends Component {
   }
 
   onBackHomeClick = (e) => {
-    this.context.router.push('/mall');
+    this.context.router.push('/');
   }
 
   render() {

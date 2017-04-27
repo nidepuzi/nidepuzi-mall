@@ -93,7 +93,7 @@ export default class XiaoluCoin extends Component {
 
     return (
       <div>
-        <Header title="我的小鹿币" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack}/>
+        <Header title="我的铺子币" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack}/>
         <div className="content coin-container">
           <div className="row bonus-point padding-bottom-xxs">
             <p className="col-xs-12 no-margin margin-top-sm text-center no-margin font-orange bonus-point-value">{coin || 0}</p>

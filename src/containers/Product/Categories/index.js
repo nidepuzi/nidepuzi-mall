@@ -48,7 +48,7 @@ export default class ProductCategory extends Component {
   }
 
   state = {
-    selectCid: '1',
+    selectCid: '120',
     sticky: false,
   }
 
@@ -63,7 +63,7 @@ export default class ProductCategory extends Component {
   componentWillReceiveProps(nextProps) {
     let { cid } = this.props.location.query;
     if (!cid) {
-      cid = '1';
+      cid = '120';
     }
 
     if (nextProps.categories.success) {
@@ -189,7 +189,7 @@ export default class ProductCategory extends Component {
             {secondCategory.map((item) => {
               return (<li className="cat-pic-p col-xs-4 margin-top-xxs" key={item.cid}>
                       <Image className="cat-pic" src={item.cat_pic} data-cid={item.cid} data-name={item.name} onClick = {this.onItemClick} quality={90}/>
-                      <p className="text-center">{item.name}</p>
+                      <p className="text-center font-xxs">{item.name}</p>
                      </li>);
               })
             }
