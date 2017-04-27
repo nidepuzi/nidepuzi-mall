@@ -96,10 +96,10 @@ export default class OpeningIntroduce extends Component {
             <div >
               <h>-----------------------------0元开店步骤---------------------------</h>
               <ul>
-              <li className="col-xs-offset-1 margin-right-xs infoo" >长按上面图片，在微信中会出现识别此二维码选项，点击识别此二维码即可关注小鹿美美公众号并自动生成店铺。在公众号右下角
+              <li className="col-xs-offset-1 margin-right-xs infoo" >长按上面图片，在微信中会出现识别此二维码选项，点击识别此二维码即可关注你的铺子公众号并自动生成店铺。在公众号右下角
                  “我的收入”》“开店二维码”获得您的二维码，转发二维码给朋友们加入即可获得邀请奖。扫码的朋友同时是您的粉丝。</li>
-              <li className="col-xs-offset-1 margin-right-xs infoo" >首次提现2-6元，轻松秒到。在小鹿美美公众号右下角“我的收入”》“累计受益”首次提现，
-                 更多收益提现请下载小鹿美美APP，发每日特卖到朋友圈，可获得8-30%订单佣金提成。</li>
+              <li className="col-xs-offset-1 margin-right-xs infoo" >首次提现2-6元，轻松秒到。在你的铺子公众号右下角“我的收入”》“累计受益”首次提现，
+                 更多收益提现请下载你的铺子APP，发每日特卖到朋友圈，可获得8-30%订单佣金提成。</li>
               </ul>
             </div>
             <div className="row no-margin">

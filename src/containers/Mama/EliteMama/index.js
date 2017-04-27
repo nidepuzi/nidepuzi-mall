@@ -80,9 +80,9 @@ export default class EliteMama extends Component {
       <div className="home-root">
         <Header title="精品汇" leftIcon="icon-angle-left" onLeftBtnClick={this.onLeftBtnClick} />
         <div className="container" id="id-container">
-        <h3>小鹿美美｜加入精英妈妈精品汇！</h3>
+        <h3>你的铺子｜加入精英妈妈精品汇！</h3>
           <div className="sub-title">
-            <div className="sub-title-box left"><p>2016-10-16 小鹿美美</p></div>
+            <div className="sub-title-box left"><p>2016-10-16 你的铺子</p></div>
           </div>
           <div className="list-group">
             <a href="#" className="list-group-item" style={{ color: '#FF1493' }}><b>1. 什么是精品汇？</b></a>
@@ -102,7 +102,7 @@ export default class EliteMama extends Component {
           </div>
           <div className="list-group">
             <a href="#" className="list-group-item" style={{ color: '#FF1493' }}><b>5. 如何成为精英妈妈？</b></a>
-            <a href="#" className="list-group-item">精英妈妈实行邀请制，第一批精英妈妈在现有小鹿妈妈群体中由系统评估并邀请产生。<br/><br/>若您想要成为精英妈妈，请联系您的上属妈妈，或者关注小鹿美美公众号直接联系管理员。</a>
+            <a href="#" className="list-group-item">精英妈妈实行邀请制，第一批精英妈妈在现有你的铺子会员群体中由系统评估并邀请产生。<br/><br/>若您想要成为精英妈妈，请联系您的上属妈妈，或者关注你的铺子公众号直接联系管理员。</a>
           </div>
           <div className="list-group">
             <a href="#" className="list-group-item" style={{ color: '#FF1493' }}><b>6. 精品汇将带来何种变革？</b></a>
@@ -110,7 +110,7 @@ export default class EliteMama extends Component {
           </div>
           <div className="list-group">
             <a href="#" className="list-group-item" style={{ color: '#FF1493' }}><b>7. 其他问题？</b></a>
-            <a href="#" className="list-group-item">请关注小鹿美美公众号联系管理员或上属妈妈咨询。</a>
+            <a href="#" className="list-group-item">请关注你的铺子公众号联系管理员或上属妈妈咨询。</a>
           </div>
         </div>
       </div>
