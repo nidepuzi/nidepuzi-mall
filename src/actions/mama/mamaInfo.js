@@ -37,7 +37,7 @@ export const fetchMamaInfoById = (mamaId) => {
   };
 };
 
-// 新建一个小鹿妈妈信息
+// 新建一个你的铺子会员信息
 export const saveMamaInfo = (params) => {
   const action = createAction(mamaInfoNames.SAVE_MAMA_INFO);
   return (dispatch) => {

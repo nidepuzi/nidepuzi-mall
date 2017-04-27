@@ -194,7 +194,7 @@ export default class BoutiqueInvite2 extends Component {
       cartId = shopBag.data[0].id;
         // 特卖抢购商品直接进入支付页面
         // if (utils.detector.isApp()) {
-        //   const jumpUrl = 'com.jimei.xlmm://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
+        //   const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + cartId + '&type=' + shopBag.data[0].type;
         //   plugins.invoke({
         //     method: 'jumpToNativeLocation',
         //     data: { target_url: jumpUrl },
@@ -227,7 +227,7 @@ export default class BoutiqueInvite2 extends Component {
 
   onShopbagClick = (e) => {
     if (utils.detector.isApp()) {
-      const jumpUrl = 'com.jimei.xlmm://app/v1/shopping_cart';
+      const jumpUrl = 'com.danlai.ndpz://app/v1/shopping_cart';
       if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
         if (utils.detector.isApp()) {
           plugins.invoke({
@@ -247,7 +247,7 @@ export default class BoutiqueInvite2 extends Component {
 
       /* plugins.invoke({
         method: 'jumpToNativeLocation',
-        data: { target_url: 'com.jimei.xlmm://app/v1/shopping_cart' },
+        data: { target_url: 'com.danlai.ndpz://app/v1/shopping_cart' },
         callback: (resp) => {},
       });*/
     } else {
@@ -296,7 +296,7 @@ export default class BoutiqueInvite2 extends Component {
     this.setState({ type: Number(type) });
 
     if (utils.detector.isApp()) {
-      Toast.show('只能在微信环境购买，请在微信点击小鹿妈妈分享的链接购买');
+      Toast.show('只能在微信环境购买，请在微信点击你的铺子会员分享的链接购买');
       return;
     }
     if ((this.state.wxPublic === 0) && (this.state.mmLinkId === undefined || this.state.mmLinkId === 0 || isNaN(this.state.mmLinkId))) {
@@ -387,7 +387,7 @@ export default class BoutiqueInvite2 extends Component {
 
   onClickJumpToBuyCoupon = (e) => {
     const { url } = e.currentTarget.dataset;
-    const prefix = 'com.jimei.xlmm://app/v1/webview?';
+    const prefix = 'com.danlai.ndpz://app/v1/webview?';
     let param = '';
     if (url) {
       param = url.substring(prefix.length);
@@ -704,7 +704,7 @@ export default class BoutiqueInvite2 extends Component {
         <If condition={!_.isEmpty(details.detail_content)}>
           <div className="content">
             <div className="bg-white fill-referal">
-              <div className="font-md font-weight-700 bottom-border padding-bottom-xxs padding-top-xxs padding-left-xxs">小鹿妈妈邀请您加入</div>
+              <div className="font-md font-weight-700 bottom-border padding-bottom-xxs padding-top-xxs padding-left-xxs">你的铺子会员邀请您加入</div>
               <div className="bottom-border mamaid-item col-xs-12 no-padding">
                 <div className="col-xs-3 mamaid-title font-xs">
                 <p >推荐人ID:</p>
