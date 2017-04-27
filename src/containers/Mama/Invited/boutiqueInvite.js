@@ -218,7 +218,7 @@ export default class BoutiqueInvite extends Component {
     const skus = productDetails.data.sku_info;
 
     if (utils.detector.isApp()) {
-      Toast.show('只能在微信环境购买，请在微信点击小鹿妈妈分享的链接购买');
+      Toast.show('只能在微信环境购买，请在微信点击你的铺子会员分享的链接购买');
       return;
     }
     if ((this.state.mmLinkId === undefined || this.state.mmLinkId === 0 || isNaN(this.state.mmLinkId))) {
@@ -382,7 +382,7 @@ export default class BoutiqueInvite extends Component {
       <div className="col-xs-12 col-sm-8 col-sm-offset-2 no-padding content-white-bg boutique-invite">
         <Header title="邀请您加入精品汇" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
         <div className="bg-white fill-referal">
-          <div className="font-md font-weight-700 bottom-border padding-bottom-xxs padding-top-xxs padding-left-xxs">小鹿妈妈邀请您加入</div>
+          <div className="font-md font-weight-700 bottom-border padding-bottom-xxs padding-top-xxs padding-left-xxs">你的铺子会员邀请您加入</div>
           <div className="bottom-border mamaid-item col-xs-12 no-padding">
             <div className="col-xs-3 mamaid-title font-xs">
             <p >推荐人ID:</p>

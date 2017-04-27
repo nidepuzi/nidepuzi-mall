@@ -161,7 +161,7 @@ export default class Charge extends Component {
     const { mama_id } = this.props.location.query;
     const { mamaInfo } = this.props;
     // if (mamaInfo.success && !_.isEmpty(mamaInfo.data) && !mamaInfo.data.can_trial) {
-    //  Toast.show('您已经是小鹿妈妈');
+    //  Toast.show('您已经是你的铺子会员');
     //  return;
     // }
 
@@ -220,13 +220,13 @@ export default class Charge extends Component {
           <If condition={type === 'trail'}>
             <div className="row no-margin text-center margin-bottom-xs">
               <Checkbox className="margin-bottom-xs" checked>同意</Checkbox>
-              <Link to="/mama/agreement">一元体验15天小鹿妈妈服务条款！</Link>
+              <Link to="/mama/agreement">一元体验15天你的铺子会员服务条款！</Link>
             </div>
           </If>
           <If condition={type === 'full'}>
             <div className="row no-margin text-center margin-bottom-xs">
               <Checkbox className="margin-bottom-xs" checked>同意</Checkbox>
-              <a href="/static/tiaokuan.html">小鹿妈妈服务条款！</a>
+              <a href="/static/tiaokuan.html">你的铺子会员服务条款！</a>
             </div>
           </If>
         <Popup active={this.state.payTypePopupActive} className="pay-type-popup">

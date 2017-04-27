@@ -349,7 +349,7 @@ export default class Progress extends Component {
     const fromPage = this.props.location.query.from_page;
     return (
       <div className={`${prefixCls}`}>
-        <Header title="小鹿美美拼团" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
+        <Header title="你的铺子拼团" leftIcon="icon-angle-left" onLeftBtnClick={this.context.router.goBack} />
         <div className="content">
           <If condition={!_.isEmpty(progress.data) && !_.isEmpty(share.data)}>
             {this.renderProductInfo(progress.data.product_info)}
