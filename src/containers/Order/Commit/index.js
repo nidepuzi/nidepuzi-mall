@@ -125,10 +125,10 @@ export default class Commit extends Component {
             window.location.href = '/mall/mama/open/succeed';
             return;
           }
-          // window.location.replace(order.data.success_url);
-          // return;
+          window.location.replace(order.data.success_url);
+          return;
         }
-        // window.location.replace(order.data.fail_url);
+        window.location.replace(order.data.fail_url);
       }
 
       if (order.data.code !== 0) {
@@ -492,6 +492,7 @@ export default class Commit extends Component {
         data: data,
       });
     } else {
+      console.log(data.charge);
       window.pingpp.createPayment(data.charge, (result, error) => {
         if (result === 'success') {
           Toast.show('支付成功');
@@ -500,11 +501,13 @@ export default class Commit extends Component {
             window.location.href = '/mall/mama/open/succeed';
             return;
           }
-          window.location.href = `${data.success_url}`;
-          return;
+          console.log('charge succ');
+          // window.location.href = `${data.success_url}`;
+          // return;
         }
         Toast.show('支付失败');
-        window.location.replace(`${data.fail_url}`);
+        console.log('charge error', result, error);
+        // window.location.replace(`${data.fail_url}`);
       });
     }
   }

@@ -5,14 +5,14 @@ var
   hasOwn = {}.hasOwnProperty,
   PingppSDK = function(){},
   cfg = {
-    PINGPP_NOTIFY_URL: 'https://api.pingxx.com/notify/charges/',
+    PINGPP_NOTIFY_URL: 'https://api.nidepuzi.com/notify/charges_xx/',
     UPACP_WAP_URL: 'https://gateway.95516.com/gateway/api/frontTransReq.do',
     ALIPAY_WAP_URL: 'https://openapi.alipay.com/gateway.do',
     UPMP_WAP_URL: 'uppay://uppayservice/?style=token&paydata=',
     JDPAY_WAP_URL: 'https://m.jdpay.com/wepay/web/pay',
     YEEPAY_WAP_URL: 'https://ok.yeepay.com/paymobile/api/pay/request',
     YEEPAY_WAP_TEST_URL: 'http://mobiletest.yeepay.com/paymobile/api/pay/request',
-    PINGPP_MOCK_URL: 'http://sissi.pingxx.com/mock.php'
+    PINGPP_MOCK_URL: 'http://sissi.nidepuzi.com/mock.php'
   },
   channels = {
     alipay_wap: 'alipay_wap',
