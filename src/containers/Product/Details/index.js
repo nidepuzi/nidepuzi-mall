@@ -89,6 +89,7 @@ export default class Detail extends Component {
     activeSkuPopup: false,
     num: 1,
     productId: 0,
+    colorName: '',
     skuId: 0,
     favoriteStatus: false,
     confirmAddBagDisable: false,
@@ -374,6 +375,7 @@ export default class Detail extends Component {
     }
     this.setState({
       productId: defaultSku.product_id,
+      colorName: defaultSku.name,
       skuId: skuId,
       activeSkuPopup: true,
     });
@@ -404,6 +406,7 @@ export default class Detail extends Component {
     }
     this.setState({
       productId: defaultSku.product_id,
+      colorName: defaultSku.name,
       skuId: skuId,
       activeSkuPopup: true,
       chargeEnable: false,
@@ -418,9 +421,10 @@ export default class Detail extends Component {
     }
     if (dataset.productid) {
       const productId = Number(dataset.productid);
-      const product = this.getProduct(productId);
+      const product = this.getProduct(dataset.color);
       this.setState({
         productId: productId,
+        colorName: dataset.color,
         skuId: product.sku_items[0].sku_id,
       });
     }
@@ -492,11 +496,11 @@ export default class Detail extends Component {
     e.preventDefault();
   }
 
-  getProduct = (productId) => {
+  getProduct = (color) => {
     const skus = this.props.details.sku_info;
     let product = {};
     _.each(skus, (sku) => {
-      if (sku.product_id === Number(productId)) {
+      if (sku.name === color) {
         product = sku;
       }
     });
@@ -663,8 +667,8 @@ export default class Detail extends Component {
 
   renderSkuHeader() {
     const { skuPopupPrefixCls, details } = this.props;
-    const { productId, skuId } = this.state;
-    const product = this.getProduct(productId);
+    const { productId, colorName, skuId } = this.state;
+    const product = this.getProduct(colorName);
     return (
       <div className={`row bottom-border ${skuPopupPrefixCls}-header`}>
         <Image className="col-xs-3 no-padding" thumbnail={200} crop="200x200" src={product.product_img} quality={90}/>
@@ -686,9 +690,9 @@ export default class Detail extends Component {
   }
 
   renderSkuColor() {
-    const { productId, skuId } = this.state;
+    const { productId, colorName, skuId } = this.state;
     const skus = this.props.details.sku_info;
-    const product = this.getProduct(productId);
+    const product = this.getProduct(colorName);
     return (
       <div className="row no-margin sku-list">
         <div className="col-xs-2 no-padding">颜色</div>
@@ -700,11 +704,11 @@ export default class Detail extends Component {
           });
           const skuItemCls = classnames({
             ['sku-item no-wrap']: true,
-            ['active']: product.product_id === sku.product_id,
+            ['active']: product.name === sku.name,
             ['disabled']: sum <= 0,
           });
           return (
-            <li onClick={this.onSkuItemClick} key={sku.product_id} data-productid={sku.product_id} data-disabled={sum <= 0}>
+            <li onClick={this.onSkuItemClick} key={sku.name} data-color={sku.name} data-productid={sku.product_id} data-disabled={sum <= 0}>
               <lable className={skuItemCls}>{sku.name}</lable>
             </li>
           );
@@ -715,8 +719,8 @@ export default class Detail extends Component {
   }
 
   renderSkuSize() {
-    const { productId, skuId } = this.state;
-    const product = this.getProduct(productId);
+    const { productId, colorName, skuId } = this.state;
+    const product = this.getProduct(colorName);
     return (
       <div className="row no-margin sku-list">
         <div className="col-xs-2 no-padding">尺寸</div>
