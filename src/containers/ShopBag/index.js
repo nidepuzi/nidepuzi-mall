@@ -119,100 +119,33 @@ export class ShopBag extends Component {
   onBuyNowClick = (e) => {
     const { shopBag } = this.props.shopBag;
     const cartIds = [];
-    const isBuyable = Number(this.state.isBuyable);
-    let score = 0;
-    let goodsNum = 0;
     _.each(shopBag.data, (item) => {
       cartIds.push(item.id);
-      score += item.num * item.elite_score;
-      goodsNum += item.num;
     });
 
-    // 购买精品券需要做积分检查, associate can change restrict
-    if (Number(this.state.type) === 6 && (isBuyable === 0)) {
-      if (this.state.eliteLevel !== 'Associate') {
-        if ((score < constants.minBuyScore) && (goodsNum < 5)) {
-          Toast.show('精品券购买个数不能小于5张或' + constants.minBuyScore + '积分，当前张数' + goodsNum + '张，当前积分' + score);
-          return;
-        }
-      } else if (this.state.eliteLevel === 'Associate') {
-        if (constants.restrictAssociateBuyScore) {
-          if ((score < constants.minBuyScore) && (goodsNum < 5)) {
-            Toast.show('精品券购买个数不能小于5张或' + constants.minBuyScore + '积分，当前张数' + goodsNum + '张，当前积分' + score);
-            return;
-          }
-        }
-      }
-    }
-
-    if (isBuyable === 1) {
-      const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
-      if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
-        plugins.invoke({
-          method: 'jumpToNativeLocation',
-          data: { target_url: jumpUrl },
-        });
-        return;
-      }
-      if (utils.detector.isIOS()) {
-        plugins.invoke({
-          method: 'jumpToNativeLocation',
-          data: { target_url: jumpUrl },
-        });
-        return;
-      }
-      window.location.href = '/mall/oc.html?cartIds=' + encodeURIComponent(cartIds.join(',')) + '&mm_linkid=' + this.state.mmLinkId;
-    } else {
-      _.each(shopBag.data, (item) => {
-        this.props.applyNegotiableCoupons(item.item_id, item.num);
+    const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
+    if (utils.detector.isAndroid() && typeof window.AndroidBridge !== 'undefined') {
+      plugins.invoke({
+        method: 'jumpToNativeLocation',
+        data: { target_url: jumpUrl },
       });
+      return;
     }
-  }
-
-  onApplyClick = (e) => {
-    const { shopBag } = this.props.shopBag;
-    const cartIds = [];
-    const isBuyable = Number(this.state.isBuyable);
-    let score = 0;
-    let goodsNum = 0;
-    _.each(shopBag.data, (item) => {
-      cartIds.push(item.id);
-      score += item.num * item.elite_score;
-      goodsNum += item.num;
-    });
-
-    // 购买精品券需要做积分检查, associate can change restrict
-    if (Number(this.state.type) === 6 && (isBuyable === 0)) {
-      if (this.state.eliteLevel !== 'Associate') {
-        if ((score < constants.minBuyScore) && (goodsNum < 5)) {
-          Toast.show('精品券购买个数不能小于5张或' + constants.minBuyScore + '积分，当前张数' + goodsNum + '张，当前积分' + score);
-          return;
-        }
-      } else if (this.state.eliteLevel === 'Associate') {
-        if (constants.restrictAssociateBuyScore) {
-          if ((score < constants.minBuyScore) && (goodsNum < 5)) {
-            Toast.show('精品券购买个数不能小于5张或' + constants.minBuyScore + '积分，当前张数' + goodsNum + '张，当前积分' + score);
-            return;
-          }
-        }
-      }
+    if (utils.detector.isIOS()) {
+      plugins.invoke({
+        method: 'jumpToNativeLocation',
+        data: { target_url: jumpUrl },
+      });
+      return;
     }
-
-    _.each(shopBag.data, (item) => {
-      this.props.applyNegotiableCoupons(item.item_id, item.num);
-    });
+    window.location.href = '/mall/oc.html?cartIds=' + encodeURIComponent(cartIds.join(',')) + '&mm_linkid=' + this.state.mmLinkId;
   }
 
   onXiaolucoinBuyClick = (e) => {
     const { shopBag } = this.props.shopBag;
     const cartIds = [];
-    const isBuyable = this.state.isBuyable;
-    let score = 0;
-    let goodsNum = 0;
     _.each(shopBag.data, (item) => {
       cartIds.push(item.id);
-      score += item.num * item.elite_score;
-      goodsNum += item.num;
     });
 
     const jumpUrl = 'com.danlai.ndpz://app/v1/trades/purchase?cart_id=' + encodeURIComponent(cartIds.join(',')) + '&type=' + this.state.type;
