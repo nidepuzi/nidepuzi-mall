@@ -187,7 +187,7 @@ export default class Commit extends Component {
 
     this.setState({ commitOrderEnable: false });
 
-    if ((walletChecked || xiaoluCoinChecked) && walletBalance >= payInfo.data.total_fee && _.isEmpty(coupon.data)) {
+    if ((walletChecked || xiaoluCoinChecked || payInfo.data.total_fee === 0) && walletBalance >= payInfo.data.total_fee && _.isEmpty(coupon.data)) {
       this.props.commitOrder({
         uuid: payInfo.data.uuid,
         cart_ids: payInfo.data.cart_ids,
