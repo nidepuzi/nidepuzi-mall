@@ -5,7 +5,7 @@
     "clean": "rimraf dist",
     "fontawesome": "./node_modules/gulp/bin/gulp.js build",
     "build": "./node_modules/webpack/bin/webpack.js --progress --verbose --colors --display-error-details --config webpack/common.config.js",
-    "build:production": "npm run clean && npm run lint && npm run fontawesome && npm run build",
+    "build:production": "npm run lint && npm run fontawesome && npm run build",
     "lint": "./node_modules/eslint/bin/eslint.js src",
     "start": "node bin/server.js",
     "test": "./node_modules/karma/bin/karma start"
